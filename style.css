@@ -504,7 +504,7 @@ header{
         text-align: center;
     }
     #hamburguer {
-    display: block;
+    display: none;
     margin: 0px 15px;
   }
 
@@ -512,10 +512,6 @@ header{
 
 /* ================= TABLET ================= */
 @media (max-width: 768px){
-
-    .navbar-container{
-        display: none;
-    }
 
     header{
         height: 70px;
@@ -665,91 +661,64 @@ header{
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px){
+
+  #hamburguer{
+    display:block;
+  }
 
   .navbar-container{
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: #ffffff;
+    position:absolute;
+    top:80px;
+    right:0;
 
-    display: flex;
-    flex-direction: column;
+    width:220px;
 
-    padding: 20px;
-    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    background-color:rgb(21, 34, 56);
 
-    transform: translateX(200%);
-    transition: transform 0.3s ease;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transform:translateX(110%);
+    transition:transform 0.3s ease;
   }
 
   .navbar-container ul{
-    flex-direction: column;
-    gap: 15px;
+    flex-direction:column;
+    width:100%;
+    padding:0;
   }
 
   .navbar-container ul li{
-    width: auto;
-    height: auto;
+    width:100%;
   }
 
   .navbar-container ul li a{
-    width: auto;
-    height: auto;
-    color: black;
-    padding: 5px 0;
+    width:100%;
+    color:white;
   }
 
-  /* menu aberto */
+  /* MENU ABERTO */
 
   .header-indent.active .navbar-container{
-    transform: translateX(0);
+    transform:translateX(0);
   }
 
-  #hamburguer{
-    display: block;
+  /* ANIMAÇÃO DO HAMBURGUER */
+
+  .header-indent.active #hamburguer span{
+    opacity:0;
   }
 
-    .header-indent.active #hamburguer span{
-  opacity: 0;
-}
+  .header-indent.active #hamburguer::before{
+    transform:translateX(-50%) rotate(45deg);
+    top:23px;
+  }
 
-    .header-indent.active #hamburguer::before{
-    transform: rotate(45deg);
-    top: 9px;
-    }
-
-    .header-indent.active #hamburguer::after{
-    transform: rotate(-45deg);
-    top: 9px;
-    }
-
-    .navbar-container{
-        width: 200px;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(21, 34, 56);
-    }
-    .navbar-container ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-
-    }
-    .navbar-container ul li{
-        height: 80px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    .navbar-container ul li a{
-        color: white;
-    }
+  .header-indent.active #hamburguer::after{
+    transform:translateX(-50%) rotate(-45deg);
+    top:23px;
+  }
 
 }
