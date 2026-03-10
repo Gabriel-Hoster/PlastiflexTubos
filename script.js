@@ -15,7 +15,7 @@ class Card{
             <div class="gallery-preview-card-container">
                 <div class="gallery-preview-card">
                     <img src="${this.imgurl}" alt="">
-                    <h2>${this.nome}</h2>
+                    <h3>${this.nome}</h3>
                     <p>${this.desc}</p>
                 </div>
             </div>
@@ -25,11 +25,11 @@ class Card{
 
 let cardList = []
 
-cardList.push(new Card("1", "Descricao do produto", ""))
-cardList.push(new Card("2", "Descricao do produto", ""))
-cardList.push(new Card("3", "Descricao do produto", ""))
-cardList.push(new Card("4", "Descricao do produto", ""))
-cardList.push(new Card("5", "Descricao do produto", ""))
+cardList.push(new Card("Tubo PVC", "Para sistemas hidráulicos domiciliares e industriais", "Media/Products/pvc.webp"))
+cardList.push(new Card("Tubo Corrugado Flexível", "Para proteção de cabos elétricos", "Media/Products/flex.png"))
+cardList.push(new Card("Tubo PEAD", "para transporte de água, gás e aplicações industriais de alta pressão.", "Media/Products/PEAD.png"))
+cardList.push(new Card("Tubo de irrigação", "Para sistemas de irrigação agrícola", "Media/Products/irrigacao.png"))
+cardList.push(new Card("Tubo de esgoto", "Para sistemas de esgoto sanitário", "Media/Products/esgoto.png"))
 
 btnl.addEventListener("click", moveLeft)
 btnr.addEventListener("click", moveRight)
